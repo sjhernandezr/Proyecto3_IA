@@ -1,0 +1,11 @@
+child,parent
+ApruebaExamen,Estudio
+ApruebaExamen,ConcentracionAlta
+ApruebaExamen,DificultadExamen
+ConcentracionAlta,DormirBien
+ConcentracionAlta,AnsiedadAlta
+CafeTomado,DormirBien
+Estudio,-
+DormirBien,-
+DificultadExamen,-
+AnsiedadAlta,-

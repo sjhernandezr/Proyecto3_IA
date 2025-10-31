@@ -1,0 +1,57 @@
+=== Grafo ===
+=== Red Bayesiana ===
+- AnsiedadAlta: padres=[]
+- ApruebaExamen: padres=['Estudio', 'ConcentracionAlta', 'DificultadExamen']
+- CafeTomado: padres=['DormirBien']
+- ConcentracionAlta: padres=['DormirBien', 'AnsiedadAlta']
+- DificultadExamen: padres=[]
+- DormirBien: padres=[]
+- Estudio: padres=[]
+Orden topológico: ['Estudio', 'DormirBien', 'DificultadExamen', 'AnsiedadAlta', 'CafeTomado', 'ConcentracionAlta', 'ApruebaExamen']
+
+=== Traza ===
+Consulta: P(ApruebaExamen | {'Estudio': 'true', 'DormirBien': 'true', 'AnsiedadAlta': 'false', 'DificultadExamen': 'false'})
+Orden topológico: ['Estudio', 'DormirBien', 'DificultadExamen', 'AnsiedadAlta', 'CafeTomado', 'ConcentracionAlta', 'ApruebaExamen']
+Estudio fijada en true: P=0.75
+  DormirBien fijada en true: P=0.7
+    DificultadExamen fijada en false: P=0.6
+      AnsiedadAlta fijada en false: P=0.7
+        Sumando CafeTomado=true: P=0.3
+          Sumando ConcentracionAlta=true: P=0.95
+            ApruebaExamen fijada en true: P=0.97
+          Sumando ConcentracionAlta=false: P=0.05
+            ApruebaExamen fijada en true: P=0.8
+          Suma total sobre ConcentracionAlta: 0.9615
+        Sumando CafeTomado=false: P=0.7
+          Sumando ConcentracionAlta=true: P=0.95
+            ApruebaExamen fijada en true: P=0.97
+          Sumando ConcentracionAlta=false: P=0.05
+            ApruebaExamen fijada en true: P=0.8
+          Suma total sobre ConcentracionAlta: 0.9615
+        Suma total sobre CafeTomado: 0.9614999999999999
+Valor no normalizado para ApruebaExamen=true: 0.21201074999999997
+Estudio fijada en true: P=0.75
+  DormirBien fijada en true: P=0.7
+    DificultadExamen fijada en false: P=0.6
+      AnsiedadAlta fijada en false: P=0.7
+        Sumando CafeTomado=true: P=0.3
+          Sumando ConcentracionAlta=true: P=0.95
+            ApruebaExamen fijada en false: P=0.03
+          Sumando ConcentracionAlta=false: P=0.05
+            ApruebaExamen fijada en false: P=0.2
+          Suma total sobre ConcentracionAlta: 0.0385
+        Sumando CafeTomado=false: P=0.7
+          Sumando ConcentracionAlta=true: P=0.95
+            ApruebaExamen fijada en false: P=0.03
+          Sumando ConcentracionAlta=false: P=0.05
+            ApruebaExamen fijada en false: P=0.2
+          Suma total sobre ConcentracionAlta: 0.0385
+        Suma total sobre CafeTomado: 0.0385
+Valor no normalizado para ApruebaExamen=false: 0.008489249999999999
+Distribución normalizada: {'true': 0.9615, 'false': 0.0385}
+
+=== Resultado ===
+{
+  "true": 0.9615,
+  "false": 0.0385
+}

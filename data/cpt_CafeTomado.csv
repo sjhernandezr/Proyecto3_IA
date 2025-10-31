@@ -1,0 +1,5 @@
+DormirBien,CafeTomado,P
+true,true,0.30      
+true,false,0.70
+false,true,0.80    
+false,false,0.20

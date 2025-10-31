@@ -1,0 +1,12 @@
+DormirBien,AnsiedadAlta,ConcentracionAlta,P
+true,false,true,0.95
+true,false,false,0.05
+
+true,true,true,0.60
+true,true,false,0.40
+
+false,false,true,0.55
+false,false,false,0.45
+
+false,true,true,0.20
+false,true,false,0.80
