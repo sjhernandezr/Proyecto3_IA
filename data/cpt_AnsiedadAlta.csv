@@ -1,3 +1,13 @@
-AnsiedadAlta,P
-true,0.3
-false,0.7
+DificultadExamen,Dia,AnsiedadAlta,P
+true,LunesaMiercoles,true,0.8
+true,LunesaMiercoles,false,0.2
+true,Jueves,true,0.9
+true,Jueves,false,0.1
+true,ViernesaDomingo,true,0.6
+true,ViernesaDomingo,false,0.4
+false,LunesaMiercoles,true,0.4
+false,LunesaMiercoles,false,0.6
+false,Jueves,true,0.5
+false,Jueves,false,0.5
+false,ViernesaDomingo,true,0.2
+false,ViernesaDomingo,false,0.8
